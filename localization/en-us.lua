@@ -21,13 +21,13 @@ return{
                 name = 'Iron and Coal Joker',
                 text = {
                     "Played {C:attention}Steel{} cards",
-                    "gives {C:chips}+#2#{} Chips",
-                    "and {C:mult}+#1#{} Mult",
+                    "gives {C:chips}+#1#{} Chips",
+                    "and {C:mult}+#2#{} Mult",
                     "when scored",
                 }
             }, 
             j_whiteem_molten = {
-                name = 'Molten Joker',
+                name = 'Melting Joker',
                 text = {
                     "This Joker gives {C:money}$#1#{} per scoring",
                     "{C:attention}Steel{} or {C:attention}Gold Card{} played",
@@ -44,8 +44,8 @@ return{
             j_whiteem_jackpot = {
                 name = "Jackpot",
                 text = {
-                    "{C:green}#3# in #4#{} chance to gain",
-                    "{C:money}$#1#{} and {X:mult,C:white} X#2# {} Mult when",
+                    "{C:green}#1# in #2#{} chance to gain",
+                    "{C:money}$#3#{} and {X:mult,C:white} X#4# {} Mult when",
                     "scoring three {C:attention}7s{}",
                 }
             }, 
@@ -56,6 +56,14 @@ return{
                     "{C:mult}+#1#{} Mult when any",
                     "card changes {C:attention}suit{}",
                     "{C:inactive}(Currently {C:mult}#2#{C:inactive} Mult)",
+                }
+            },
+            j_whiteem_trashcan = {
+                name = "Golden Trash Can",
+                text = {
+                    "{C:green}#1# in #2#{} chance to gain",
+                    "{C:money}$#3#{} for each {C:attention}non-scoring",
+                    "cards in each hand",
                 }
             }
         },
@@ -70,6 +78,5 @@ return{
                 }
             },
         }
-
     }
 }

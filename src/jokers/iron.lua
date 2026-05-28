@@ -1,6 +1,6 @@
 SMODS.Joker {
     key = "iron",
-    --atlas = "placeholders.png",
+    atlas = 'wjokers',
     pos = { x = 0, y = 0 },
     
     config = { 

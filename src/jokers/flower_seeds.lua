@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "flower_seeds",
-    --atlas = "placeholders.png",
-    pos = { x = 0, y = 0 },
+    atlas = 'wjokers',
+    pos = { x = 1, y = 0 },
 
     config={
         extra={

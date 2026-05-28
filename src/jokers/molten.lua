@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "molten",
-    --atlas = "placeholders.png",
-    pos = { x = 0, y = 0 },
+    atlas = 'wjokers',
+    pos = { x = 4, y = 0 },
 
     config = { 
         extra = { 
@@ -24,16 +24,18 @@ SMODS.Joker {
             G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) + card.ability.extra.dollars
             return {
                 dollars = card.ability.extra.dollars,
-                func = function() -- This is for timing purposes, it runs after the dollar manipulation
+                func = function ()
                     G.E_MANAGER:add_event(Event({
+                        trigger = "after",
                         func = function()
-                            G.GAME.dollar_buffer = 0
+                            context.card:set_ability(G.P_CENTERS["m_stone"])
                             return true
                         end
                     }))
-                end,
-            context.other_card:set_ability(G.P_CENTERS.m_stone,nil,true)
+                    return true
+                end
             }
         end
-    end,
+    end
+
 }

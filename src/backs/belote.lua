@@ -1,6 +1,6 @@
 SMODS.Back{
 	key = "belote",
-	atlas = "placeholders",
+	atlas = "others",
 	pos = { x = 0, y = 0 },
 
     config = {play_limit = 4, discard_limit = 4},

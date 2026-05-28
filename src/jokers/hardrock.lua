@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "hardrock",
-    --atlas = "placeholders.png",
-    pos = { x = 0, y = 0 },
+    atlas = 'wjokers',
+    pos = { x = 2, y = 0 },
     
     config = {
         extra = {
