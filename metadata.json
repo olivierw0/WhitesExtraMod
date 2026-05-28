@@ -1,8 +1,8 @@
 {
-    "id": "whiteextramod",
+    "id": "WhiteExtraMod",
     "name": "White's Extra Mod",
+    "author": ["White"],
     "description": "My first mod adding extra content to the game.",
-    "author": "White",
     "prefix": "whiteem",
     "main_file": "main.lua",
     "version": "0.0.1"
