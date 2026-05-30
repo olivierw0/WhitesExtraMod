@@ -104,8 +104,22 @@ return{
             j_whiteem_champagne = {
                 name = "Champagne Flute",
                 text = {
-                    "Rettriger {C:attention}Glass Cards",
+                    "Retriggers played {C:attention}Glass Cards",
                     "{C:inactive}({C:attention}#1#{} {C:inactive}cards remaining)"
+                }
+            },
+            j_whiteem_jix = {
+                name = "Jix Seven",
+                text = {
+                    "{C:attention}Retriggers{} all {C:attention}6{} and {C:attention}7",
+                    "#1# additionnal times"
+                }
+            },
+            j_whiteem_signature = {
+                name = "Signature",
+                text = {
+                    "{C:chips}+#1#{} Chips for your",
+                    "most played {C:attention}poker hand"
                 }
             }
         },
