@@ -24,7 +24,7 @@ SMODS.Joker{
     } 
     end,
 
-    calculate = function(self, card,context)
+    calculate = function(self, card, context)
         if context.repetition and context.cardarea == G.play and 
         (context.other_card:get_id() == 6 or context.other_card:get_id() == 7) then
             return {

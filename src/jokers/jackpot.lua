@@ -14,6 +14,9 @@ SMODS.Joker {
     rarity = 1,
     cost = 5,
 
+    unlocked = true,
+    discovered = true,
+
     loc_vars = function(self, info_queue, card)
         local numerator, denominator = 
             SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'jackpot')

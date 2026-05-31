@@ -121,6 +121,15 @@ return{
                     "{C:chips}+#1#{} Chips for your",
                     "most played {C:attention}poker hand"
                 }
+            },
+            j_whiteem_galaxy = {
+                name = "Galaxy Rock",
+                text = {
+                    "If played hand is a single ",
+                    "{C:attention}Stone Card{}, destroy it and create a",
+                    "{C:planet}Planet{} card for your {C:attention}most{} played hand",
+                    "{C:inactive}(Must have room)",
+                }
             }
         },
 
