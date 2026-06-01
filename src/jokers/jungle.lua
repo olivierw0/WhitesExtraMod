@@ -9,6 +9,15 @@ SMODS.Joker {
         }
     },
 
+    loc_txt = {
+        ['name'] = 'Welcome to the Jungle',
+        ['text'] = {
+            "Played {C:attention}Wild Cards{}",
+            "gives {X:mult,C:white} X#1# {} Mult",
+            "when scored",
+        }
+    },
+    
     rarity = 3, 
     cost = 8,
     

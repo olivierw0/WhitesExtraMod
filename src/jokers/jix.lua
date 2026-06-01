@@ -10,6 +10,14 @@ SMODS.Joker{
         }
     },
 
+    loc_txt = {
+        ['name'] = "Jix Seven",
+        ['text'] = {
+            "{C:attention}Retriggers{} all {C:attention}6{} and {C:attention}7",
+            "#1# additionnal times"
+        }
+    },
+
     rarity = 4,
     cost = 20,
 

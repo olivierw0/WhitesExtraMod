@@ -3,8 +3,18 @@ SMODS.Joker {
     atlas = 'wjokers',
     loc = { x = 0, y = 0},
 
-    rarity = 2,
-    cost = 6,
+    loc_txt = {
+        ['name'] = "Galaxy Rock",
+        ['text'] = {
+            "If played hand is a single ",
+            "{C:attention}Stone Card{}, destroy it and create a",
+            "{C:planet}Planet{} card for your {C:attention}most{} played hand",
+            "{C:inactive}(Must have room)",
+        }
+    },
+
+    rarity = 1,
+    cost = 5,
 
     unlocked = true,
     discovered = true,

@@ -10,6 +10,16 @@ SMODS.Joker {
         }
     },
 
+    loc_txt = {
+        ['name'] = "Flower Seeds",
+        ['text'] = {
+            "This Joker gains",
+            "{C:mult}+#1#{} Mult when any",
+            "card changes {C:attention}suit{}",
+            "{C:inactive}(Currently {C:mult}#2#{C:inactive} Mult)",
+        }
+    },
+
     rarity = 1,
     cost = 5,
 

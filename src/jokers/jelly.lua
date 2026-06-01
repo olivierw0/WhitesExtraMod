@@ -9,6 +9,15 @@ SMODS.Joker {
         }
     },
 
+    loc_txt = {
+        ['name'] = "Eerie Jelly",
+        ['text'] = {
+            "Adds 1 free {C:attention}Spectral Pack",
+            "at start of shop", 
+            "{C:inactive}({C:attention}#1#{} {C:inactive}rounds remaining)",
+        }
+    },
+
     rarity = 2,
     cost = 5,
 

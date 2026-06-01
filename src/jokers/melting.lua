@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = "molten",
+    key = "melting",
     atlas = 'wjokers',
     pos = { x = 4, y = 0 },
 
@@ -7,6 +7,15 @@ SMODS.Joker {
         extra = { 
             dollars = 6 
         } 
+    },
+
+    loc_txt ={
+        ['name'] = 'Melting Joker',
+        ['text'] = {
+            "This Joker gives {C:money}$#1#{} per scoring",
+            "{C:attention}Steel{} or {C:attention}Gold Card{} played",
+            "and turn them into {C:attention}Stone Card{}",
+        }
     },
 
     rarity = 2,

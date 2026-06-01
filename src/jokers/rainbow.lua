@@ -9,6 +9,14 @@ SMODS.Joker {
         } 
     },
 
+    loc_txt = {
+        ['name'] = "ROYGBIV",
+        ['text'] = {
+            "{X:mult,C:white} X#1# {} Mult if played",
+            "hand cointains 5 {C:attention}Wild Cards{}",
+        }
+    },
+
     rarity = 3,
     cost = 7,
     

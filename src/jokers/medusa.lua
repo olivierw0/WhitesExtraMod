@@ -9,8 +9,18 @@ SMODS.Joker {
         }
     },
 
-    rarity = 2,
-    cost = 6,
+    loc_txt={
+        ['name'] = "Medusa",
+        ['text'] = {
+            "The {C:attention}first time{} that a played hand",
+            "contains a {C:attention}Queen{} and",
+            "a single {C:attention}unscored{} card",
+            "turn it into a {C:attention}Stone Card",
+        }
+    },
+
+    rarity = 1,
+    cost = 5,
     
 
     blueprint_compat = false,

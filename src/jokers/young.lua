@@ -9,6 +9,16 @@ SMODS.Joker{
         }
     },
     
+    loc_txt = {
+        ['name'] = "Young Joker",
+        ['text'] = {
+            "Played cards with",
+            "{V:1}#2#{} suit give",
+            "{C:chips}+#1#{} Chips when scored",
+            "{s:0.8}suit changes at end of round"
+        }
+    },
+    
     cost = 4,
     rarity = 1,
 

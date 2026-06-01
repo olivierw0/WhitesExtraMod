@@ -10,6 +10,17 @@ SMODS.Joker{
         }
     },
 
+    loc_txt={
+        ['name'] = "Signature",
+        ['text'] = {
+            "{C:chips}+#1#{} Chips for your",
+            "most played {C:attention}poker hand"
+        }
+    },
+    
+    rarity = 1,
+    cost = 5,
+
     loc_vars = function(self,info_queue,card)
         return{
             vars = {
@@ -17,9 +28,6 @@ SMODS.Joker{
             }
         }
     end,
-
-    rarity = 1,
-    cost = 5,
 
     unlocked = true,
     discovered = true,

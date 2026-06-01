@@ -11,6 +11,15 @@ SMODS.Joker {
         } 
     },
 
+    loc_txt = {
+        ['name'] = "Jackpot",
+        ['text'] = {
+            "{C:green}#1# in #2#{} chance to gain",
+            "{C:money}$#3#{} and {X:mult,C:white} X#4# {} Mult when",
+            "scoring three {C:attention}7s{}",
+        }
+    },
+
     rarity = 1,
     cost = 5,
 

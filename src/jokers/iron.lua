@@ -9,6 +9,15 @@ SMODS.Joker {
             chips = 26 
         } 
     },
+    loc_txt = {
+        ['name'] = 'Iron and Coal Joker',
+        ['text'] = {
+            "Played {C:attention}Steel Cards",
+            "gives {C:chips}+#1#{} Chips",
+            "and {C:mult}+#2#{} Mult",
+            "when scored",
+        }
+    },
     
     rarity = 1,
     cost = 4,
