@@ -23,6 +23,7 @@ SMODS.Joker{
         
     unlocked = true,
     discovered = true,
+    eternal_compat = false,
     
     loc_vars = function(self, info_queue,card)
         return{

@@ -19,3 +19,45 @@ young_card = {suit = 'Spades'},
 old_card = {suit = 'Spades'},
 '''
 match_indent = true
+
+# SMODS.change_booster_limit
+[[patches]]
+[patches.pattern]
+target = '''=[SMODS _ "src/utils.lua"]'''
+pattern = '''G.GAME.modifiers.extra_boosters = (G.GAME.modifiers.extra_boosters or 0) + mod'''
+position = "after"
+payload = '''
+if mod < 0 and G.shop then
+    --Remove a booster pack if there's too much in shop
+    if #G.shop_booster.cards > G.shop_booster.config.card_limit then 
+        G.shop_booster.cards[#G.shop_booster.cards]:remove()
+        G.shop_booster.config.card_limit = math.max(G.shop_booster.config.card_limit + mod,2)
+    end
+end
+'''
+match_indent = true
+
+# SMODS.change_voucher_limit
+[[patches]]
+[patches.pattern]
+target = '''=[SMODS _ "src/utils.lua"]'''
+pattern = '''G.GAME.modifiers.extra_vouchers = (G.GAME.modifiers.extra_vouchers or 0) + mod'''
+position = "after"
+payload = '''
+if mod < 0 and G.shop then
+    --Remove a voucher if there's too much in shop
+
+    if #G.shop_vouchers.cards > G.shop_vouchers.config.card_limit + mod then 
+        G.shop_vouchers.cards[#G.shop_vouchers.cards]:remove()
+    end
+
+    -- Also remove from the spawn list
+    if G.GAME.current_round.voucher and #G.GAME.current_round.voucher > 0 then
+        local last_voucher = G.GAME.current_round.voucher[#G.GAME.current_round.voucher]
+        G.GAME.current_round.voucher.spawn[last_voucher] = false
+        table.remove(G.GAME.current_round.voucher, #G.GAME.current_round.voucher)
+    end
+    
+end
+'''
+match_indent = true
