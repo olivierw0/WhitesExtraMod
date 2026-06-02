@@ -1,7 +1,7 @@
 SMODS.Joker{
     key='shoplifting',
     atlas='wjokers',
-    pos= { x = 3, y = 2 },
+    pos= { x = 0, y = 4 },
 
     config = {
         extra = {
@@ -46,7 +46,7 @@ SMODS.Joker{
         change_shop_size(-1)
         SMODS.change_voucher_limit(-1)
         SMODS.change_booster_limit(-1)
-        
+
         G.E_MANAGER:add_event(Event({
             func = function()
                 G.GAME.discount_percent = G.GAME.discount_percent - card.ability.extra.percent

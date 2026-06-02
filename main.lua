@@ -20,12 +20,18 @@ local mod = SMODS.current_mod
 
 local jokers_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/jokers")
 local decks_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/backs")
+local consumables_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/consumables")
+
 for _, file in ipairs(jokers_src) do
     assert(SMODS.load_file("src/jokers/" .. file))()
 end
 
 for _, file in ipairs(decks_src) do
     assert(SMODS.load_file("src/backs/" .. file))()
+end
+
+for _, file in ipairs(consumables_src) do
+    assert(SMODS.load_file("src/consumables/" .. file))()
 end
 --#endregion
 
