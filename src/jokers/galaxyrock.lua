@@ -13,6 +13,10 @@ SMODS.Joker {
         }
     },
 
+    loc_vars= function (self, info_queue, card)
+        info_queue[#info_queue+1] = G.P_CENTERS.m_stone
+    end,
+
     rarity = 1,
     cost = 5,
 

@@ -7,7 +7,7 @@ SMODS.Joker {
         ['name'] = "Commonprint",
         ['text'] = {
             "Copies ability of",
-            "a {C:attention}Common Joker{} to",
+            "a {C:blue}Common {C:attention}Joker{} to",
             "the right {C:attention}twice{}"
         }
     },

@@ -26,6 +26,7 @@ SMODS.Joker{
     eternal_compat = false,
     
     loc_vars = function(self, info_queue,card)
+        info_queue[#info_queue+1] = G.P_CENTERS.m_glass
         return{
             vars = {
                 card.ability.extra.cards_left

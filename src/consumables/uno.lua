@@ -1,6 +1,6 @@
 SMODS.ConsumableType{
     key = 'uno',
-    default = 'plus_two',
+    default = 'wild',
     primary_colour = G.C.RED,
     secondary_colour = G.C.BLACK,
     collection_rows = { 3, 4 },
@@ -29,7 +29,23 @@ SMODS.Consumable{
             "a selected card by {C:attention}#1#",
         }
     },
-
+-- alt 
+    -- need to create a +2 Tag 
+    -- loc_txt={
+    --     ['name'] = '+2 Card',
+    --     ['text'] = {
+    --         "Get {C:attention}+#1#{} Handsize",
+    --         "next round",
+    --     }
+    -- },
+--alt2
+    -- loc_txt={
+    --     ['name'] = '+2 Card',
+    --     ['text'] = {
+    --         "Get 1 copie of {C:attention}#1#",
+    --         "Selected Cards",
+    --     }
+    -- },
     loc_vars = function(self,info_queue,card)
         return {
             vars = {
@@ -146,8 +162,8 @@ SMODS.Consumable{
     loc_txt={
         ['name'] = 'Skip Card',
         ['text'] = {
-            "Gains a random",
-            "{C:attention}Skip Tag{}",
+            "Gain a random",
+            "{C:attention}Tag{}",
         }
     },
 
@@ -168,7 +184,70 @@ SMODS.Consumable{
         end
 
         add_tag({key = random_key})
-        play_sound('generic1', 0.9 + math.random() * 0.1, 0.8)
-        play_sound('holo1', 1.2 + math.random() * 0.1, 0.4)
+    end
+}
+
+SMODS.Consumable{
+    key = 'wild',
+    set = 'uno',
+    atlas = 'others',
+    pos = { x= 0, y=0},
+        
+    unlocked = true,
+    discovered = true,
+    
+    loc_txt={
+        ['name'] = 'Wild Card',
+        ['text'] = {
+            "Gains #1# "
+        }
+    },
+
+    can_use = function(self,card)
+        return true
+    end,
+
+    use = function (self,card,area,copier)
+        
+    end
+}
+
+SMODS.Consumable{
+    key = 'wild4',
+    set = 'uno',
+    atlas = 'others',
+    pos = { x= 0, y=0},
+
+    config = {
+        extra = {
+            copy = 4
+        }
+    },
+        
+    unlocked = true,
+    discovered = true,
+    
+    loc_txt={
+        ['name'] = 'Wild +4 Card',
+        ['text'] = {
+            "Gains {C:attention}#1# Wild{} copies",
+            "of a selected card",
+        }
+    },
+
+    loc_vars = function(self,info_queue,card)
+        return {
+            vars = {
+                card.ability.extra.copy
+            }
+        } 
+    end,
+
+    can_use = function(self,card)
+        
+    end,
+
+    use = function (self,card,area,copier)
+    
     end
 }
