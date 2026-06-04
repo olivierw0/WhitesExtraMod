@@ -1,6 +1,6 @@
 SMODS.ConsumableType{
     key = 'uno',
-    default = 'reverse',
+    default = 'wild',
     primary_colour = G.C.RED,
     secondary_colour = G.C.BLACK,
     collection_rows = { 3, 4 },
@@ -11,7 +11,7 @@ SMODS.ConsumableType{
 SMODS.Consumable{
     key = 'plus_two',
     set = 'uno',
-    pos = {x = 0, y=0},
+    pos = {x = 3, y=0},
     atlas = 'others',
 
     unlocked = true,
@@ -212,7 +212,7 @@ SMODS.Consumable{
     key = 'skip',
     set = 'uno',
     atlas = 'others',
-    pos = {x = 0, y=0},
+    pos = {x = 2, y=0},
     
     unlocked = true,
     discovered = true,
@@ -255,7 +255,7 @@ SMODS.Consumable{
     key = 'wild',
     set = 'uno',
     atlas = 'others',
-    pos = { x= 0, y=0},
+    pos = { x= 4, y=0},
         
     unlocked = true,
     discovered = true,
@@ -316,7 +316,8 @@ SMODS.Consumable{
     key = 'wild4',
     set = 'uno',
     atlas = 'others',
-    pos = { x = 0, y = 0 },
+    pos = { x = 0, y = 1 },
+    soul_pos = { x = 1, y = 1},
     
     hidden = true,
     soul_set = 'Uno',
