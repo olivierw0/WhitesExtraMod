@@ -1,5 +1,5 @@
 SMODS.Joker{
-    key = 'communist',
+    key = 'toofull',
     atlas = 'wjokers',
 
     pos = { x = 0, y = 3},
@@ -12,7 +12,7 @@ SMODS.Joker{
     },
 
     loc_txt = {
-        ['name'] = 'Communist Joker',
+        ['name'] = 'Hands too Full',
         ['text'] = {
             '{C:mult}+#1#{} Mult',
             '{C:red}#2#{} consumable slot',

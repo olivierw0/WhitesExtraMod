@@ -1,6 +1,6 @@
 SMODS.Joker {
 
-    key = 'capitalist',
+    key = 'mathcorrect',
     atlas = 'wjokers',
     pos = { x = 1, y = 3},
 
@@ -15,7 +15,7 @@ SMODS.Joker {
     cost = 5,
 
     loc_txt = {
-        ['name'] = "Capitalist Joker",
+        ['name'] = "Mathematically Correct Joker",
         ['text'] = {
             "{X:chips,C:white} X#1# {} Chips",
             "{C:mult}#2#{} Mult",

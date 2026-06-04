@@ -1,16 +1,16 @@
 SMODS.ConsumableType{
-    key = 'uno',
-    default = 'wild',
+    key = 'Uno',
+    default = 'reverse',
     primary_colour = G.C.RED,
     secondary_colour = G.C.BLACK,
-    collection_rows = { 3, 4 },
+    collection_rows = { 2, 3 },
     shop_rate = 0
 }
 
 -- +2 Card
 SMODS.Consumable{
     key = 'plus_two',
-    set = 'uno',
+    set = 'Uno',
     pos = {x = 3, y=0},
     atlas = 'others',
 
@@ -115,7 +115,7 @@ SMODS.Consumable{
 -- Reverse Card
 SMODS.Consumable{
     key = 'reverse',
-    set = 'uno',
+    set = 'Uno',
     atlas = 'others',
     pos = {x = 1, y=0},
 
@@ -210,7 +210,7 @@ SMODS.Consumable{
 
 SMODS.Consumable{
     key = 'skip',
-    set = 'uno',
+    set = 'Uno',
     atlas = 'others',
     pos = {x = 2, y=0},
     
@@ -253,7 +253,7 @@ SMODS.Consumable{
 -- Wild Card
 SMODS.Consumable{
     key = 'wild',
-    set = 'uno',
+    set = 'Uno',
     atlas = 'others',
     pos = { x= 4, y=0},
         
@@ -262,8 +262,8 @@ SMODS.Consumable{
 
     config = {
         extra = {
-            number = 3,
-            level = 2
+            number = 2,
+            level = 1
         }
     },
 
@@ -295,6 +295,7 @@ SMODS.Consumable{
         
         -- Single loop to collect all hands with their play counts
         for hand_key, hand in pairs(G.GAME.hands) do
+            
             table.insert(hand_list, {key = hand_key, played = hand.played})
         end
         
@@ -314,7 +315,7 @@ SMODS.Consumable{
 -- Wild 4 Card
 SMODS.Consumable{
     key = 'wild4',
-    set = 'uno',
+    set = 'Uno',
     atlas = 'others',
     pos = { x = 0, y = 1 },
     soul_pos = { x = 1, y = 1},

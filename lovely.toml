@@ -61,3 +61,25 @@ if mod < 0 and G.shop then
 end
 '''
 match_indent = true
+
+
+# Wild 4 Card -- 3% chance of appearing
+[[patches]]
+[patches.pattern]
+target = '''functions/common_events.lua'''
+pattern = '''        if (_type == 'Planet' or _type == 'Spectral') and
+        not (G.GAME.used_jokers['c_black_hole'] and not SMODS.showman('c_black_hole')) then
+            if pseudorandom('soul_'.._type..G.GAME.round_resets.ante) > 0.997 then
+                forced_key = 'c_black_hole'
+            end
+        end'''
+position = "after"
+payload = '''
+if _type == 'Uno' and
+not (G.GAME.used_jokers['c_whiteem_wild4'] and not SMODS.showman('c_whiteem_wild4')) then
+    if pseudorandom('soul_'.._type..G.GAME.round_resets.ante) > 0.97 then
+        forced_key = 'c_whiteem_wild4'
+    end
+end
+'''
+match_indent = true
