@@ -12,7 +12,7 @@ SMODS.Joker {
     },
 
     rarity = 1,
-    cost = 5,
+    cost = 6,
 
     loc_txt = {
         ['name'] = "Mathematically Correct Joker",
