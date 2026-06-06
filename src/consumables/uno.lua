@@ -208,6 +208,7 @@ SMODS.Consumable{
     end,
 }
 
+-- Skip Card
 SMODS.Consumable{
     key = 'skip',
     set = 'Uno',

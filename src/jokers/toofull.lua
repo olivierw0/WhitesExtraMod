@@ -6,7 +6,7 @@ SMODS.Joker{
 
     config = {
         extra = {
-            mult = 17,
+            mult = 15,
             consumable_slot = -1,
         }
     },
