@@ -10,7 +10,7 @@ SMODS.Joker{
     },
 
     loc_txt = {
-        ['name'] = "Shoplifting Joker",
+        ['name'] = "Shopping Display",
         ['text'] = {
             "{C:attention}+1 Shop{}, {C:attention}Booster Pack{}",
             "and {C:attention}Voucher Slot{} in Shop",
