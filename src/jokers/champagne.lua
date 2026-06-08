@@ -10,14 +10,6 @@ SMODS.Joker{
         }
     },
 
-    loc_txt = {
-        ['name'] = "Champagne Flute",
-        ['text'] = {
-            "Retrigger played {C:attention}Glass Cards",
-            "{C:inactive}({C:attention}#1#{} {C:inactive}cards remaining)"
-        }
-    },
-
     cost = 6,
     rarity = 2,
         

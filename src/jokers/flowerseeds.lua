@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = "flower_seeds",
+    key = "flowerseeds",
     atlas = 'wjokers',
     pos = { x = 1, y = 0 },
 
@@ -7,16 +7,6 @@ SMODS.Joker {
         extra={
             mult=0, 
             mult_mod=1
-        }
-    },
-
-    loc_txt = {
-        ['name'] = "Flower Seeds",
-        ['text'] = {
-            "This Joker gains",
-            "{C:mult}+#1#{} Mult when any",
-            "card changes {C:attention}suit{}",
-            "{C:inactive}(Currently {C:mult}#2#{C:inactive} Mult)",
         }
     },
 

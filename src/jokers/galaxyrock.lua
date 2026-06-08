@@ -3,16 +3,6 @@ SMODS.Joker {
     atlas = 'wjokers',
     pos = { x = 3, y = 3},
 
-    loc_txt = {
-        ['name'] = "Galaxy Rock",
-        ['text'] = {
-            "If played hand is a single ",
-            "{C:attention}Stone Card{}, destroy it and create a",
-            "{C:planet}Planet{} card for your {C:attention}most{} played hand",
-            "{C:inactive}(Must have room)",
-        }
-    },
-
     loc_vars= function (self, info_queue, card)
         info_queue[#info_queue+1] = G.P_CENTERS.m_stone
     end,

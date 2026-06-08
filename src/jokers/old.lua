@@ -8,16 +8,6 @@ SMODS.Joker{
             mult = 5,
         }
     },
-
-    loc_txt = {
-        ['name'] = "Old Joker",
-        ['text'] = {
-            "Played cards with",
-            "{V:1}#2#{} suit give",
-            "{C:mult}+#1#{} Mult when scored",
-            "{s:0.8}suit changes at end of round"
-        }
-    },
     
     cost = 6,
     rarity = 1,

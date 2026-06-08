@@ -8,13 +8,6 @@ SMODS.Joker {
             reps = 1
         }
     },
-
-    loc_txt ={
-        ['name'] = 'Ricochet',
-        ['text']= {
-            "{C:attention}Retriggers{} all {C:attention}Stone Cards{}",
-        }
-    },
     
     rarity = 2, 
     cost = 6,

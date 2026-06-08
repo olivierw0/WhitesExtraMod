@@ -13,16 +13,6 @@ SMODS.Joker {
         info_queue[#info_queue+1] = G.P_CENTERS.m_stone
     end,
 
-    loc_txt={
-        ['name'] = "Medusa",
-        ['text'] = {
-            "The {C:attention}first time{} that a played hand",
-            "contains a {C:attention}Queen{} and",
-            "a single {C:attention}unscored{} card",
-            "turn it into a {C:attention}Stone Card",
-        }
-    },
-
     rarity = 1,
     cost = 5,
     

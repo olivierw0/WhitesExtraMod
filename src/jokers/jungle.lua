@@ -8,15 +8,6 @@ SMODS.Joker {
             type = 'Flush'
         }
     },
-
-    loc_txt = {
-        ['name'] = 'Welcome to the Jungle',
-        ['text'] = {
-            "If played hand contains",
-            "a {C:attention}#1#{} and a {C:attention}Wild Card{}",
-            "level up the poker hand played",
-        }
-    },
     
     rarity = 2, 
     cost = 7,

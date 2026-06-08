@@ -12,16 +12,6 @@ SMODS.Joker {
         } 
     },
 
-    loc_txt = {
-        ['name'] = "Lucky 7",
-        ['text'] = {
-            "Played {C:attention}7s{} gives {C:money}$#1#",
-            "and {X:mult,C:white}X#2#{} Mult",
-            "{C:green}#3# in #4#{} chance to gain",
-            "{C:money}$#5#{} if a {C:attention}7{} scored",
-        }
-    },
-
     rarity = 1,
     cost = 5,
 

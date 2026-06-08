@@ -9,14 +9,7 @@ SMODS.Joker {
         }
     },
 
-    loc_txt ={
-        ['name'] = 'Hard Rock',
-        ['text']= {
-            "Played {C:attention}Stone Cards{}",
-            "gives {X:chips,C:white} X#1# {} Chips ",
-            "when scored",
-        }
-    },
+
     
     rarity = 3, 
     cost = 8,

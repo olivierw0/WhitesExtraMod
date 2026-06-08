@@ -10,15 +10,6 @@ SMODS.Joker{
         }
     },
 
-    loc_txt = {
-        ['name'] = "Golden Trash Can",
-        ['text'] = {
-            "{C:green}#1# in #2#{} chance to gain",
-            "{C:money}$#3#{} for each {C:attention}non-scoring",
-            "cards in each hand",
-        }
-    },
-
     rarity = 1,
     cost = 5,
     

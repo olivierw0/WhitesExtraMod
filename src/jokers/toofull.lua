@@ -11,14 +11,6 @@ SMODS.Joker{
         }
     },
 
-    loc_txt = {
-        ['name'] = 'Hands too Full',
-        ['text'] = {
-            '{C:mult}+#1#{} Mult',
-            '{C:red}#2#{} consumable slot',
-        }
-    },
-
     loc_vars = function(self,info_queue,card)
         return{
             vars = {

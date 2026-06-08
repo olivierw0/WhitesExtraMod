@@ -14,15 +14,6 @@ SMODS.Joker {
     rarity = 1,
     cost = 6,
 
-    loc_txt = {
-        ['name'] = "Mathematically Correct Joker",
-        ['text'] = {
-            "{X:chips,C:white} X#1# {} Chips",
-            "{C:mult}#2#{} Mult",
-            "{C:inactive}(Mult cannot be less than 1)",
-        }
-    },
-
     loc_vars = function (self,info_queue,card)
         return {
             vars = {

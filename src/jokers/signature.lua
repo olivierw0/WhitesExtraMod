@@ -9,14 +9,6 @@ SMODS.Joker{
             bonus = false
         }
     },
-
-    loc_txt={
-        ['name'] = "Signature",
-        ['text'] = {
-            "{C:chips}+#1#{} Chips for your",
-            "most played {C:attention}poker hand"
-        }
-    },
     
     rarity = 1,
     cost = 4,

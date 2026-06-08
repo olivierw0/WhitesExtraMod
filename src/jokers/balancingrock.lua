@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = "rock_balancing",
+    key = "balancingrock",
     atlas = 'wjokers',
     pos = { x = 4, y = 4 },
 
@@ -7,16 +7,6 @@ SMODS.Joker {
         extra = {
             xmult_gain = 0.75,
             xmult = 1
-        }
-    },
-
-    loc_txt ={
-        ['name'] = 'Rock Balancing',
-        ['text']= {
-            "Gains {X:mult,C:white} X#1# {} Mult when a hand",
-            "is played with a {C:attention}Stone Card{} in it",
-            "resets when a hand without is played",
-            "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
         }
     },
     

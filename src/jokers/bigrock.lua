@@ -1,20 +1,11 @@
 SMODS.Joker {
-    key = "big_rock",
+    key = "bigrock",
     atlas = 'wjokers',
     pos = { x = 5, y = 0 },
 
     config = {
         extra = {
             odds = 2
-        }
-    },
-
-    loc_txt ={
-        ['name'] = 'Big Rock',
-        ['text']= {
-            "If played hand is {C:attention}5 Stone Cards",
-            "{C:attention}win{} the round, {C:attention}destroy{} them",
-            "{C:green}#1# in #2#{} chance to {S:1.1,C:red,E:2}self-destruct{}",
         }
     },
     

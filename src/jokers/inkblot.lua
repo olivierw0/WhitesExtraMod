@@ -9,17 +9,6 @@ SMODS.Joker{
             poker_hand = 'High Card'
         }
     },
-
-    loc_txt={
-        ['name'] = "Ink Blot Joker",
-        ['text'] = {
-            "Once per round, creates a copy of",
-            "{C:attention}1{} random {C:attention}consumable{} in your",
-            "possession if hand played is {C:attention}#1#{},",
-            "{s:0.8}poker hand changes each round",
-            "{C:inactive}(Must have room)"
-        }
-    },
     
     rarity = 3,
     cost = 8,

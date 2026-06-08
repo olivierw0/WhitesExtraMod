@@ -9,15 +9,6 @@ SMODS.Joker {
         } 
     },
 
-    loc_txt ={
-        ['name'] = 'Melting Joker',
-        ['text'] = {
-            "This Joker gives {C:money}$#1#{} per scoring",
-            "{C:attention}Steel{} or {C:attention}Gold Card{} played",
-            "and turn them into {C:attention}Stone Card{}",
-        }
-    },
-
     rarity = 2,
     cost = 7,
 

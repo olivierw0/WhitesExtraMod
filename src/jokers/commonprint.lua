@@ -3,15 +3,6 @@ SMODS.Joker {
     atlas = "wjokers",
     pos = { x = 4, y = 3 },
 
-    loc_txt = {
-        ['name'] = "Commonprint",
-        ['text'] = {
-            "Copies ability of",
-            "a {C:blue}Common {C:attention}Joker{} to",
-            "the right {C:attention}twice{}"
-        }
-    },
-
     rarity = 3,
     cost = 10,
 

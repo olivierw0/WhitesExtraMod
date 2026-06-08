@@ -1,20 +1,11 @@
 SMODS.Joker{
-    key='shoplifting',
+    key='shopdisplay',
     atlas='wjokers',
     pos= { x = 0, y = 4 },
 
     config = {
         extra = {
             percent = -50
-        }
-    },
-
-    loc_txt = {
-        ['name'] = "Shopping Display",
-        ['text'] = {
-            "{C:attention}+1 Shop{}, {C:attention}Booster Pack{}",
-            "and {C:attention}Voucher Slot{} in Shop",
-            "but everything is {C:money}50%{} more expensive"
         }
     },
 
