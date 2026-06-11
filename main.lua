@@ -51,7 +51,7 @@ local function reset_old_card()
 			old_suits[#old_suits + 1] = k
 		end
 	end
-	local old_card = pseudorandom_element(old_suits, pseudoseed("tux" .. G.GAME.round_resets.ante))
+	local old_card = pseudorandom_element(old_suits, pseudoseed("old" .. G.GAME.round_resets.ante))
 	G.GAME.current_round.old_card.suit = old_card
 end
 
@@ -66,11 +66,27 @@ local function reset_young_card()
 			young_suits[#young_suits + 1] = k
 		end
 	end
-	local young_card = pseudorandom_element(young_suits, pseudoseed("tux" .. G.GAME.round_resets.ante))
+	local young_card = pseudorandom_element(young_suits, pseudoseed("young" .. G.GAME.round_resets.ante))
 	G.GAME.current_round.young_card.suit = young_card
+end
+
+local function reset_saturated_card()
+    G.GAME.current_round.saturated_card = { suit = 'Spades' }
+    local valid_saturated_cards = {}
+    for _, playing_card in ipairs(G.playing_cards) do
+        if not SMODS.has_no_suit(playing_card) then
+            valid_saturated_cards[#valid_saturated_cards + 1] = playing_card
+        end
+    end
+    local satu_card = pseudorandom_element(valid_saturated_cards,
+        'saturated' .. G.GAME.round_resets.ante)
+    if satu_card then
+        G.GAME.current_round.saturated_card.suit = satu_card.base.suit
+    end
 end
 
 mod.reset_game_globals = function(run_start)
     reset_young_card()
     reset_old_card()
+    reset_saturated_card()
 end

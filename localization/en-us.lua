@@ -35,12 +35,6 @@ return{
                         "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
                     }
                 },
-            j_whiteem_ricochet ={
-                ['name'] = 'Ricochet',
-                ['text']= {
-                    "{C:attention}Retriggers{} all {C:attention}Stone Cards{}",
-                }
-            },
             j_whiteem_champagne = {
                 ['name'] = "Champagne Flute",
                 ['text'] = {
@@ -62,7 +56,7 @@ return{
                     "This Joker gains",
                     "{C:mult}+#1#{} Mult when any",
                     "card changes {C:attention}suit{}",
-                    "{C:inactive}(Currently {C:mult}#2#{C:inactive} Mult)",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
                 }
             },
             j_whiteem_inkblot ={
@@ -217,6 +211,24 @@ return{
                     "{C:attention}poker hand{} is a {C:attention}#2#{},",
                     "resets if not played,",
                     "{s:0.8}poker hand changes every hand",
+                }
+            },
+            j_whiteem_saturated = {
+                ['name'] = "Saturated Joker",
+                ['text'] = {
+                    "Have {X:mult,C:white} X#1# {} Mult",
+                    "for each cards in your deck",
+                    "with {V:1}#2#{} suit",
+                    "{s:0.8}suit change every round",
+                    "{C:inactive}(Currently {X:mult,C:white} X#3# {C:inactive} Mult)"
+                }
+            },
+            j_whiteem_mulligan = {
+                ['name'] = "Mulligan",
+                ['text'] = {
+                    "{C:attention}Shuffles back{} into the deck",
+                    "the {C:attention}first discard{}",
+                    "each round",
                 }
             },
         }
