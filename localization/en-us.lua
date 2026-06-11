@@ -2,11 +2,11 @@ return{
     descriptions = {
         Joker = {
             j_whiteem_bigrock ={
-                ['name'] = 'Josetta Stone',
+                ['name'] = 'Big Rock',
                 ['text'] = {
                     "If played hand is {C:attention}5 Stone Cards",
-                    "{S:1.1,C:attention}win{} the round, {C:attention}destroy{} them",
-                    "{C:green}#1# in #2#{} chance to {S:1.1,C:red,E:2}self-destruct{}",
+                    "{S:1.1,C:attention}win{} the round and ",
+                    "{S:1.1,C:red,E:2}self-destruct{}",
                 }
             },
             j_whiteem_galaxyrock = {
@@ -26,7 +26,7 @@ return{
                     "when scored",
                 }
             },
-            j_whiteem_balancingrock ={
+            j_whiteem_sisyphus ={
                     ['name'] = 'Sisyphus',
                     ['text']= {
                         "Gains {X:mult,C:white} X#1# {} Mult when a hand",
@@ -107,14 +107,13 @@ return{
                     "level up the poker hand played",
                 }
             },
-            j_whiteem_lucky7 = {
-                ['name'] = "7",
+            j_whiteem_seven7 = {
+                ['name'] = "Seven 7 Money",
                 ['text'] = {
                     "Played {C:attention}7s{} gives {C:money}$#1#",
-                    "and {X:mult,C:white}X#2#{} Mult,",
-                    "when {C:attention}#3#{} have been",
-                    "played gain {C:money}$#4#{}",
-                    "{C:inactive}(Currently #5#/#3# Sevens){}",
+                    "when {C:attention}#2#{} of them have",
+                    "been played gain {C:money}$#3#{}",
+                    "{C:inactive}(Currently {C:attention}#4#{C:inactive}/#2# Sevens){}",
                 }
             },
             j_whiteem_mathcorrect = {

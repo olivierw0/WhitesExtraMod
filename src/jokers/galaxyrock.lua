@@ -7,8 +7,8 @@ SMODS.Joker {
         info_queue[#info_queue+1] = G.P_CENTERS.m_stone
     end,
 
-    rarity = 1,
-    cost = 5,
+    rarity = 2,
+    cost = 6,
 
     unlocked = true,
     discovered = true,

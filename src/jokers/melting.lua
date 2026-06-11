@@ -9,7 +9,7 @@ SMODS.Joker {
         } 
     },
 
-    rarity = 3,
+    rarity = 2,
     cost = 8,
 
     unlocked = true,

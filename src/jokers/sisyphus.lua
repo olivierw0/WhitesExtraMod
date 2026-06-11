@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = "balancingrock",
+    key = "sisyphus",
     atlas = 'wjokers',
     pos = { x = 4, y = 4 },
 
@@ -10,8 +10,8 @@ SMODS.Joker {
         }
     },
     
-    rarity = 2, 
-    cost = 7,
+    rarity = 3, 
+    cost = 8,
     
     perishable_compat = false,
 
@@ -43,14 +43,12 @@ SMODS.Joker {
             if reset then
                 card.ability.extra.xmult = 1
                 return{
-                    -- add sfx rock falling
                     message = "Rolling Down!",
                     colour = HEX("808080")
                 }
             else
                 card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
                 return{
-                    -- add a SFX zen
                     message = 'Rolling Up...',
                     colour = HEX("808080")
                 }
