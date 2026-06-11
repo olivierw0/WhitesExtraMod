@@ -13,7 +13,10 @@ SMODS.Joker{
             juice_card_until(card, eval, true)
         end
 
-        if context.pre_discard and not context.blueprint then
+        if context.pre_discard and not context.blueprint 
+        and G.GAME.current_round.discards_used <= 0 
+        then
+            print('#context.full_hand pre_discard : ',#context.full_hand)
             print("test prediscard")
             return {
                 func = function ()
@@ -46,8 +49,9 @@ SMODS.Joker{
         end
 
         if context.discard and not context.blueprint 
-        -- and G.GAME.current_round.discards_used <= 0 
+        and G.GAME.current_round.discards_used <= 0 
         then
+            print('#context.full_hand discard : ',#context.full_hand)
             print("Test Discard")
             return {
                 func = function ()

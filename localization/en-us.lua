@@ -231,6 +231,15 @@ return{
                     "each round",
                 }
             },
+            j_whiteem_sandcastle = {
+                ['name'] = "Sand Castle",
+                ['text'] = {
+                    "Gain {C:blue}+1{} Hand",
+                    "every {C:attention}#1# Stone Card{} in",
+                    "your deck",
+                    "{C:inactive}(Currently {C:blue}+#2#{} {C:inactive}Hands )'",
+                }
+            },
         }
     },
 

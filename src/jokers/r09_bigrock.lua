@@ -31,7 +31,6 @@ SMODS.Joker {
             --     end
             -- end
             -- SMODS.destroy_cards(cards)
-
             G.GAME.chips = G.GAME.blind.chips
 
             G.E_MANAGER:add_event(Event({
