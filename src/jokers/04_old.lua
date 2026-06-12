@@ -5,12 +5,12 @@ SMODS.Joker{
 
     config = {
         extra = {
-            mult = 5,
+            mult = 7,
         }
     },
-    
+
+    rarity = 2,
     cost = 6,
-    rarity = 1,
 
     unlocked = true,
     discovered = true,

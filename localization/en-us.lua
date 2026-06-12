@@ -1,12 +1,13 @@
 return{
     descriptions = {
         Joker = {
-            j_whiteem_bigrock ={
-                ['name'] = 'Big Rock',
+            j_whiteem_tombstone ={
+                ['name'] = 'Tombstone',
                 ['text'] = {
-                    "If played hand is {C:attention}5 Stone Cards",
-                    "{S:1.1,C:attention}win{} the round and ",
-                    "{S:1.1,C:red,E:2}self-destruct{}",
+                    "Everytime a non-{C:attention}Stone Card",
+                    "is {C:attention}destroyed",
+                    "add a {C:attention}Stone Card{} to",
+                    "your deck",
                 }
             },
             j_whiteem_galaxyrock = {
@@ -29,10 +30,11 @@ return{
             j_whiteem_sisyphus ={
                     ['name'] = 'Sisyphus',
                     ['text']= {
-                        "Gains {X:mult,C:white} X#1# {} Mult when a hand",
-                        "is played with a {C:attention}Stone Card{} in it",
-                        "resets when a hand without is played",
-                        "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
+                        "This Joker gains {X:chips,C:white} X#1# {} Chips",
+                        "for every {C:attention}Stone Card{}",
+                        "discarded this ante",
+                        "{s:0.8}starts at {X:chips,C:white,s:0.8} X0.5 {s:0.8} Chips",
+                        "{C:inactive}(Currently {X:chips,C:white} X#2# {C:inactive} Chips)",
                     }
                 },
             j_whiteem_champagne = {
@@ -226,18 +228,28 @@ return{
             j_whiteem_mulligan = {
                 ['name'] = "Mulligan",
                 ['text'] = {
-                    "{C:attention}Shuffles back{} into the deck",
-                    "the {C:attention}first discard{}",
-                    "each round",
+                    "{C:attention}Reshuffles{} into the deck",
+                    "the cards from the",
+                    "{C:attention}first discard{} each round",
                 }
             },
             j_whiteem_sandcastle = {
                 ['name'] = "Sand Castle",
                 ['text'] = {
-                    "Gain {C:blue}+1{} Hand",
+                    "When {C:attention}Blind{} is selected",
+                    "gain {C:blue}+1{} Hand for",
                     "every {C:attention}#1# Stone Card{} in",
                     "your deck",
-                    "{C:inactive}(Currently {C:blue}+#2#{} {C:inactive}Hands )'",
+                    "{C:inactive}(Currently {C:blue}+#2#{}{C:inactive} Hands)",
+                }
+            },
+            j_whiteem_stripmine = {
+                ['name'] = "Strip Mining",
+                ['text'] = {
+                    "This Joker gains {X:chips,C:white} X#1# {} Chips",
+                    "when a {C:attention}Stone Card{}",
+                    "is destroyed",
+                    "{C:inactive}(Currently {X:chips,C:white} X#2# {C:inactive} Chips)",
                 }
             },
         }

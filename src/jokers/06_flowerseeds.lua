@@ -27,14 +27,14 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.change_suit then
+        if context.change_suit and not context.blueprint then
             card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
             return {
-                message_card = card,
-                message = "Grows!",
+                message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
                 colour = G.C.MULT
             }
         end
+
         if context.joker_main then
             return {mult = card.ability.extra.mult}
         end

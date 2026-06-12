@@ -5,16 +5,15 @@ SMODS.Joker {
 
     config={
         extra = {
-            xmult_gain = 0.75,
-            xmult = 1
+            xchips_mod = 0.25,
+            -- xchips_minus_mod = 0.5,
+            xchips = 0.5
         }
     },
     
-    rarity = 3, 
-    cost = 8,
+    rarity = 2, 
+    cost = 6,
     
-    perishable_compat = false,
-
     unlocked = true,
     discovered = true,
 
@@ -24,41 +23,63 @@ SMODS.Joker {
         info_queue[#info_queue+1] = G.P_CENTERS.m_stone
         return {
             vars = {
-                card.ability.extra.xmult_gain,
-                card.ability.extra.xmult
+                card.ability.extra.xchips_mod,
+                -- card.ability.extra.xchips_minus_mod,
+                card.ability.extra.xchips
             }
         }
     end,
 
     calculate = function(self,card,context)
-        if context.before then
-            local reset = true
-            for _, v in ipairs(context.scoring_hand) do 
-                if SMODS.has_enhancement(v,'m_stone') and not v.debuff then
-                    reset = false
-                    break
-                end
-            end
 
-            if reset then
-                card.ability.extra.xmult = 1
-                return{
-                    message = "Rolling Down!",
-                    colour = HEX("808080")
-                }
-            else
-                card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
-                return{
-                    message = 'Rolling Up...',
-                    colour = HEX("808080")
-                }
-            end
+        -- if context.individual and not context.blueprint and
+        --     not context.other_card.debuff and SMODS.has_enhancement(context.other_card,'m_stone')
+        -- then
+        --     card.ability.extra.xchips = card.ability.extra.xchips - card.ability.extra.xchips_minus_mod
+        --     if card.ability.extra.xchips < 0.5 then 
+        --         card.ability.extra.xchips = 0.5
+        --     end
+        --     return {
+        --         message = localize { type = 'variable', key = 'a_xchips', vars = { card.ability.extra.xchips } },
+        --         colour = G.C.BLUE,
+        --         delay = 0.45
+        --     }
+        -- end
+
+        if context.discard and not context.other_card.debuff and
+            SMODS.has_enhancement(context.other_card,'m_stone') and not context.blueprint 
+        then
+            card.ability.extra.xchips = card.ability.extra.xchips + card.ability.extra.xchips_mod
+            return{
+                message = localize { type = 'variable', key = 'a_xchips', vars = { card.ability.extra.xchips } },
+                colour = G.C.BLUE,
+                delay = 0.45
+            }
+        end
+
+        if context.ante_end and context.modify_ante and not context.blueprint then
+            card.ability.extra.xchips = 0.5
+            print("end of ante")
+            return{
+                message = localize('k_reset'),
+                colour = G.C.BLUE,
+            }
         end
 
         if context.joker_main then
             return {
-                xmult = card.ability.extra.xmult
+                xchips = card.ability.extra.xchips
             }
         end
     end,
+
+    -- in_pool = function(self, args) 
+    --     local stone_cpt = 0
+    --     for _, playing_card in ipairs(G.playing_cards or {}) do
+    --         if SMODS.has_enhancement(playing_card, 'm_stone') then
+    --             stone_cpt = stone_cpt + 1
+    --         end
+    --     end
+    --     if stone_cpt >= 2 then return true else return false end
+    -- end
 }

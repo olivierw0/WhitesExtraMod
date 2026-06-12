@@ -6,7 +6,7 @@ SMODS.Joker {
 
     config = {
         extra = {
-            xchips = 3,
+            xchips = 2.5,
             mult = -17
         }
     },

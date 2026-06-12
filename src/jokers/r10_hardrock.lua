@@ -8,8 +8,6 @@ SMODS.Joker {
             xchips = 2
         }
     },
-
-
     
     rarity = 3, 
     cost = 8,
