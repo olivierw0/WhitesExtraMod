@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = 'stripmine',
     atlas = 'wjokers',
-    pos = { x = 6, y = 3 },
+    pos = { x = 5, y = 3 },
 
     config = {
         extra = {

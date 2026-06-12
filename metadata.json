@@ -1,10 +1,12 @@
 {
-    "id": "WhiteExtraMod",
-    "name": "White's Extra Mod",
+    "id": "rockwild",
+    "name": "Rockwild+",
     "author": ["White"],
-    "description": "My first mod adding extra content to the game.",
+    "description": "Small vanilla+ mod adding extra content to the game",
     "prefix": "whiteem",
+    "badge_colour": "E3BB7F",
+	"badge_text_colour": "42413F",
     "main_file": "main.lua",
-    "version": "0.0.1"
+    "version": "0.1.1"
 
 }

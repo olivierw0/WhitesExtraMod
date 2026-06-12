@@ -217,40 +217,52 @@ SMODS.Consumable{
     
     unlocked = true,
     discovered = true,
-    
+
+    config ={
+        extra = {
+            p_tags = {'tag_foil','tag_holo','tag_polychrome','tag_negative','tag_uncommon','tag_rare'}
+        }
+    },
     loc_txt={
         ['name'] = 'Skip Card',
         ['text'] = {
             "Gain a random",
-            "{C:attention}Tag{}",
+            "{C:attention}Joker Tag{}",
         }
     },
+
+
+    loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue+1] = {key = 'tag_foil', set = 'Tag'}
+        info_queue[#info_queue+1] = {key = 'tag_holo', set = 'Tag'}
+        info_queue[#info_queue+1] = {key = 'tag_polychrome', set = 'Tag'}
+        info_queue[#info_queue+1] = {key = 'tag_negative', set = 'Tag'}
+        info_queue[#info_queue+1] = {key = 'tag_uncommon', set = 'Tag'}
+        info_queue[#info_queue+1] = {key = 'tag_rare', set = 'Tag'}
+    end,
 
     can_use = function(self, card)
         return true
     end,
 
     use = function (self, card, area, copier)
-        -- local counter = 0
-        -- local random_key = nil
-        
-        -- for key, _ in pairs(G.P_TAGS) do
-        --     counter = counter + 1
-        --     -- 1 in counter chance to pick the current key
-        --     if math.random(1, counter) == 1 then
-        --         random_key = key
-        --     end
+        -- local tag_pool = get_current_pool('Tag')
+        -- local selected_tag = pseudorandom_element(tag_pool, 'whiteem')
+        -- local it = 1
+        -- while selected_tag == 'UNAVAILABLE' do
+        --     it = it + 1
+        --     selected_tag = pseudorandom_element(tag_pool, 'whiteem' .. it)
         -- end
-        -- add_tag({key = random_key})
+        -- add_tag(Tag(selected_tag, false, 'Small'))
 
-        local tag_pool = get_current_pool('Tag')
-        local selected_tag = pseudorandom_element(tag_pool, 'whiteem')
-        local it = 1
-        while selected_tag == 'UNAVAILABLE' do
-            it = it + 1
-            selected_tag = pseudorandom_element(tag_pool, 'whiteem' .. it)
-        end
-        add_tag(Tag(selected_tag, false, 'Small'))
+        G.E_MANAGER:add_event(Event({
+            func = (function()
+                add_tag(Tag(pseudorandom_element(card.ability.extra.p_tags, pseudoseed('unoskip'))))
+                play_sound('generic1', 0.9 + math.random()*0.1, 0.8)
+                play_sound('holo1', 1.2 + math.random()*0.1, 0.4)
+                return true
+            end)
+        }))
     end
 }
 
@@ -260,59 +272,96 @@ SMODS.Consumable{
     set = 'Uno',
     atlas = 'others',
     pos = { x= 4, y=0},
+
+    -- config = {
+    --     extra = {
+    --         number = 2,
+    --         level = 1
+    --     }
+    -- },
+
+    -- loc_vars = function (self, info_queue, card)
+    --     return{
+    --         vars = {
+    --             card.ability.extra.number,
+    --             card.ability.extra.level
+    --         }
+    --     } 
+    -- end,
+    
+    -- loc_txt={
+    --     ['name'] = 'Wild Card',
+    --     ['text'] = {
+    --         "Upgrade your {C:attention}#1#",
+    --         "{C:attention}most{} played hands",
+    --         "by {C:attention}#2#{} levels",
+    --     }
+    -- },
+
+    -- can_use = function(self,card)
+    --     return true
+    -- end,
+
+    -- use = function (self,card,area,copier)
+    --     local _hands = {}
+    --     local hand_list = {}
+        
+    --     -- Single loop to collect all hands with their play counts
+    --     for hand_key, hand in pairs(G.GAME.hands) do
+            
+    --         table.insert(hand_list, {key = hand_key, played = hand.played})
+    --     end
+        
+    --     -- Sort by play count (highest first)
+    --     table.sort(hand_list, function(a, b) return a.played > b.played end)
+        
+    --     -- Take the top N hands
+    --     for i = 1, math.min(card.ability.extra.number, #hand_list) do
+    --         table.insert(_hands, hand_list[i].key)
+    --     end
+        
+    --     print('hands :', _hands)
+    --     SMODS.upgrade_poker_hands({hands=_hands, level_up=card.ability.extra.level, from = card})
+    -- end
         
     unlocked = true,
     discovered = true,
-
-    config = {
-        extra = {
-            number = 2,
-            level = 1
-        }
-    },
-
-    loc_vars = function (self, info_queue, card)
-        return{
-            vars = {
-                card.ability.extra.number,
-                card.ability.extra.level
-            }
-        } 
-    end,
     
     loc_txt={
         ['name'] = 'Wild Card',
         ['text'] = {
-            "Upgrade your {C:attention}#1#",
-            "{C:attention}most{} played hands",
-            "by {C:attention}#2#{} levels",
+            "Create a {C:attention}Wild{} copy",
+            "of a selected card",
         }
     },
 
+    loc_vars = function(self,info_queue,card)
+        info_queue[#info_queue+1] = G.P_CENTERS.m_wild
+    end,
+
     can_use = function(self,card)
-        return true
+        return G.hand and #G.hand.highlighted == 1
     end,
 
     use = function (self,card,area,copier)
-        local _hands = {}
-        local hand_list = {}
-        
-        -- Single loop to collect all hands with their play counts
-        for hand_key, hand in pairs(G.GAME.hands) do
-            
-            table.insert(hand_list, {key = hand_key, played = hand.played})
-        end
-        
-        -- Sort by play count (highest first)
-        table.sort(hand_list, function(a, b) return a.played > b.played end)
-        
-        -- Take the top N hands
-        for i = 1, math.min(card.ability.extra.number, #hand_list) do
-            table.insert(_hands, hand_list[i].key)
-        end
-        
-        print('hands :', _hands)
-        SMODS.upgrade_poker_hands({hands=_hands, level_up=card.ability.extra.level, from = card})
+        G.E_MANAGER:add_event(Event({
+            func = function()
+                local _first_dissolve = nil
+                local new_cards = {}
+                G.playing_card = (G.playing_card and G.playing_card + 1) or 1
+                local _card = copy_card(G.hand.highlighted[1], nil, nil, G.playing_card)
+                _card:set_ability('m_wild')
+                _card:add_to_deck()
+                G.deck.config.card_limit = G.deck.config.card_limit + 1
+                table.insert(G.playing_cards, _card)
+                G.hand:emplace(_card)
+                _card:start_materialize(nil, _first_dissolve)
+                _first_dissolve = true
+                new_cards[#new_cards + 1] = _card
+                SMODS.calculate_context({ playing_card_added = true, cards = new_cards })
+                return true
+            end
+        }))
     end
 }
 

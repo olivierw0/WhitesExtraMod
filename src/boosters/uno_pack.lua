@@ -11,6 +11,9 @@ SMODS.Booster ({
     weight = 0.75,
     draw_hand = true,
 
+    discovered = true,
+    unlocked = true,
+
     loc_txt = {
         ['name']='Uno Pack',
         ['text']={
@@ -64,9 +67,12 @@ SMODS.Booster ({
     pos = { x = 3, y = 1 },
     config = { extra = 3, choose = 1 },
 
-    cost = 6,
+    cost = 7,
     weight = 0.5,
     draw_hand = true,
+
+    discovered = true,
+    unlocked = true,
 
     loc_txt = {
         ['name']='Jumbo Uno Pack',
@@ -121,9 +127,12 @@ SMODS.Booster ({
     pos = { x = 4, y = 1 },
     config = { extra = 4, choose = 2 },
 
-    cost = 8,
+    cost = 9,
     weight = 0.2,
     draw_hand = true,
+
+    discovered = true,
+    unlocked = true,
 
     loc_txt = {
         ['name']='Mega Uno Pack',

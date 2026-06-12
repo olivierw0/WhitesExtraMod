@@ -3,6 +3,7 @@ SMODS.Joker{
     atlas = "wjokers",
     
     pos = {x = 6, y = 2},
+    soul_pos = {x = 6, y = 3},
 
     unlocked = true,
     discovered = true,
