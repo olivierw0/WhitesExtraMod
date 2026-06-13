@@ -8,6 +8,8 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
 
+    blueprint_compat = false,
+
     rarity = 1,
     cost = 3,
 
